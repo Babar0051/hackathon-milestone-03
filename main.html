@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder By Babar Ahmed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Resume Builder By Babar Ahmed</h1>
+
+    <!-- Form for User Input -->
+    <section id="form-section">
+        <form id="resume-form">
+            <h2>Personal Information</h2>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="profilePicture">Profile Picture:</label>
+            <input type="file" id="profilePicture" accept="image/*" required>
+
+            <h2>Education</h2>
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" required></textarea>
+
+            <h2>Work Experience</h2>
+            <label for="workExperience">Work Experience:</label>
+            <textarea id="workExperience" name="workExperience" required></textarea>
+
+            <h2>Skills</h2>
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" name="skills" required>
+            
+            <button type="submit">Generate Resume</button>
+        </form>
+    </section>
+
+    <!-- Dynamic Resume Section -->
+    <section id="resume-section">
+        <h2>Generated Resume</h2>
+        <img id="resume-profile-pic" src="" alt="Profile Picture" style="display:none; width: 150px; border-radius: 50%;">
+        <div id="resume">
+            <div id="resume-personal-info"></div>
+            <div id="resume-education"></div>
+            <div id="resume-work-experience"></div>
+            <div id="resume-skills"></div>
+        </div>
+        <button id="downloadResume">Download as PDF</button>
+        <button id="shareLink">Share Resume</button>
+    </section>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
